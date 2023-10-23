@@ -63,7 +63,7 @@ export default function obfuscatorPlugin(obOptions?: Options) {
 
   return {
     name: "vite-plugin-javascript-obfuscator",
-    enforce: "post" as "post",
+    // enforce: "post" as "post",
     apply: obOptions?.apply || (() => true),
     transform(src: string, id: string) {
       if (anymatch(excludeMatcher, id, { dot: true })) {
